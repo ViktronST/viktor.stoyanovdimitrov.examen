@@ -31,6 +31,7 @@ public class UtilidadesExamen {
         for (int i = 0; i < numeros.length; i++){
             System.out.print(numeros[i] + " ");
         }
+        
         System.out.println();
     }
 
@@ -64,7 +65,7 @@ public class UtilidadesExamen {
         }
         
         int[] extremos = {maximo, minimo};
-        
+
         return extremos;
     }
 
