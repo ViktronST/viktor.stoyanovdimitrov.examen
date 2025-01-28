@@ -22,13 +22,13 @@ public class UtilidadesExamen {
             System.out.println("Introduce el número " + (i + 1) + ": ");
             array[i] = scan.nextInt();
         }
-
+        
         return array;
     }
 
     //Función mostrarArray que reciba un array lo recorra y lo imprima.
     public static void mostrarArray(int[] numeros){
-        for (int i = 0; i < numeros.length; i++){
+        for (int i = 0; i < numeros.length; i++){       //for each
             System.out.print(numeros[i] + " ");
         }
         
@@ -41,7 +41,7 @@ public class UtilidadesExamen {
     public static double calcularPromedio(int[] numeros){
         double suma = 0;
         
-        for (int i = 0; i < numeros.length; i++){
+        for (int i = 0; i < numeros.length; i++){       //for each
             suma += numeros[i];
         }
 
@@ -52,10 +52,10 @@ public class UtilidadesExamen {
     //     ◦ Reciba un array.
     //     ◦ Encuentre y devuelva el valor máximo y el mínimo.
     public static int[] encontrarExtremos(int[] numeros){
-        int maximo = numeros[0];
-        int minimo = numeros[0];
+        int maximo = numeros[0];                        //int maximo = Integer.MAX_VALUE;
+        int minimo = numeros[0];                        //int minimo = Integer.MIN_VALUE;
 
-        for (int i = 1; i < numeros.length; i++){
+        for (int i = 1; i < numeros.length; i++){       //for each
             if (numeros[i] > maximo){
                 maximo = numeros[i];
             }
@@ -66,7 +66,7 @@ public class UtilidadesExamen {
         
         int[] extremos = {maximo, minimo};
 
-        return extremos;
+        return extremos;                                //return new int[] {maximo, minimo};
     }
 
     // Escribe una función filtrarMayoresQuePromedio que:
@@ -75,7 +75,7 @@ public class UtilidadesExamen {
     public static int[] filtrarMayoresQuePromedio(int[] numeros, double promedio){
         int contador = 0;
         
-        for (int i = 0; i < numeros.length; i++){
+        for (int i = 0; i < numeros.length; i++){       //for each
             if (numeros[i] > promedio){
                 contador++;
             }
@@ -84,9 +84,9 @@ public class UtilidadesExamen {
         int[] filtrado = new int[contador];
         contador = 0;
        
-        for (int i = 0; i < numeros.length; i++){
+        for (int i = 0; i < numeros.length; i++){       //for each
             if (numeros[i] > promedio){
-                filtrado[contador] = numeros[i];
+                filtrado[contador] = numeros[i];        //filtrado[contador++] = numeros[i];
                 contador++;
             }
         }
